@@ -5,6 +5,9 @@
 <img src="./preview2.png"
      alt="preview"
      style="float: left; margin-right: 10px;" />
+<img src="./preview3.png"
+     alt="preview"
+     style="float: left; margin-right: 10px;" />
 
 ## Development
 ```

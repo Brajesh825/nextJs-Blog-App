@@ -2,11 +2,10 @@
 <img src="./preview.png"
      alt="preview"
      style="float: left; margin-right: 10px;" />
-```
 <img src="./preview2.png"
      alt="preview"
      style="float: left; margin-right: 10px;" />
-```
+
 ## Development
 ```
 First, run the development server:

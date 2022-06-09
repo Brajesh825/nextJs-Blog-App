@@ -30,3 +30,11 @@
   font-size: 1.25rem;
   border-radius: 2rem;
 }
+.postList{
+  margin-top: 1rem;
+}
+
+.postItem{
+  padding: 1rem;
+  border: 1px solid black;
+}

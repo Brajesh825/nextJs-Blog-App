@@ -1,9 +1,11 @@
 import postStyles from "../styles/Post.module.css";
 import { useState, useEffect } from "react";
+import Post from "./Post";
 
-const Form = ({reRender,setReRender}) => {
+const Form = () => {
   const [post, setPost] = useState("");
   const [wordCount, setWordCount] = useState(0);
+  const [posts,setPosts] = useState([])
 
   function WordCount(str) {
     return str.trim().split(/\s+/).length;
@@ -32,9 +34,15 @@ const Form = ({reRender,setReRender}) => {
     const result = await response.json();
     setPost("");
     setWordCount(0);
-    setReRender(++reRender)
   }
-
+  useEffect( () => {
+    async function fetchMyAPI() {
+      let response = await fetch('http://localhost:3000/api/posts')
+      response = await response.json()
+      setPosts(response.data)
+    }
+    fetchMyAPI()
+  },[]);
 
   return (<>
     <div className={postStyles.container}>
@@ -50,6 +58,7 @@ const Form = ({reRender,setReRender}) => {
         <button onClick={addPost}>Send</button>
       </div>
     </div>
+    <Post posts={posts} />
     </>
   );
 };

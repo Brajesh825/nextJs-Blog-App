@@ -1,6 +1,5 @@
-import { server } from "../config";
 import Head from "next/head";
-import Form from "../components/Form";
+import Main from "../components/Main";
 
 export default function Home({}) {
   return (
@@ -9,19 +8,8 @@ export default function Home({}) {
         <title>Home</title>
         <meta name="keywords" content="web development, programming" />
       </Head>
-      <Form/>
+      <Main/>
       </div>
   );
 }
-
-// export const getStaticProps = async () => {
-//   const res = await fetch(server+"/api/articles");
-//   const articles = await res.json();
-
-//   return {
-//     props: {
-//       articles,
-//     },
-//   };
-// };
 

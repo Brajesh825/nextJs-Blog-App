@@ -38,3 +38,18 @@
   padding: 1rem;
   border: 1px solid black;
 }
+
+.item{
+  border: 1px solid black;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.item a{
+  border: 1px solid black;
+  width: 8rem !important;
+  color: black;
+  background-color: aqua;
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+}
